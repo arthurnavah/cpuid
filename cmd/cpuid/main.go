@@ -18,11 +18,13 @@ import (
 	"os"
 	"strings"
 
-	"github.com/klauspost/cpuid/v2"
+	"github.com/arthurnavah/cpuid/v2"
 )
 
-var js = flag.Bool("json", false, "Output as JSON")
-var level = flag.Int("check-level", 0, "Check microarchitecture level. Exit code will be 0 if supported")
+var (
+	js    = flag.Bool("json", false, "Output as JSON")
+	level = flag.Int("check-level", 0, "Check microarchitecture level. Exit code will be 0 if supported")
+)
 
 func main() {
 	flag.Parse()
